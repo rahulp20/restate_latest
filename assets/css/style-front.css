@@ -787,8 +787,8 @@ input[type="text"]:active, input[type="text"]:focus, input[type="date"]:active, 
 .owl-carousel{padding:0px;}
 
 .owl-buttons .owl-prev, .owl-buttons .owl-next{  float: left;  height: 36px;  text-indent: -999em;  width: 49px;}
-.owl-buttons .owl-prev {background: url("../img/prev.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);left:-36px;}
-.owl-buttons .owl-next {background: url("../img/next.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);right:0px;}
+.owl-buttons .owl-prev {background: url("../images/prev.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);left:-36px;}
+.owl-buttons .owl-next {background: url("../images/next.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);right:0px;}
 .details-images img{max-width:100%;}
 .div_sec{margin-bottom:15px; padding-bottom:15px;}
 #tabs-wrap .hide-content{display:none;}

@@ -10,6 +10,15 @@ class User extends CI_Controller {
     }
 
     function index() {
-        echo "hii";
+        $this->load->view("front_templates/header.php");
+        $this->load->view("front/main.php");
+        $this->load->view("front_templates/footer.php");
     }
+    
+    function details() {
+        $this->load->view("front_templates/header.php");
+        $this->load->view("front/details.php");
+        $this->load->view("front_templates/footer.php");
+    }
+
 }

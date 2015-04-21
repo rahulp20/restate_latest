@@ -105,9 +105,7 @@ class Admin extends CI_Controller {
         } else {
             $input_arr['created_date'] = $this->date_functions->current_db_datetime();
             $input_arr['updated_date'] = $this->date_functions->current_db_datetime();
-//            print_r($input_arr);exit;
-            $result = $this->insert_update->insert_data('property_info', $input_arr, 1);
-            echo $result;
+            $this->insert_update->insert_data('property_info', $input_arr, 1);
         }
     }
 

@@ -97,27 +97,27 @@ $this->load->view('templates/leftpanel.php');
         new_row = "";
         new_row += "";
         new_row += '<div class="row">';
-        new_row += '<div class="form-group col-md-3">'
-        new_row += '<div class="col-sm-12">'
-        new_row += '<input class="form-control disabled" id="title" name="detail_text[]" placeholder="Text" value="" type="text">'
-        new_row += '</div>'
-        new_row += '</div>'
-        new_row += '<div class="form-group col-md-3">'
-        new_row += '<div class="col-sm-12">'
-        new_row += '<input class="form-control disabled" id="title" name="detail_link[]" placeholder="Link (Optional)" value="" type="text">'
-        new_row += '</div>'
-        new_row += '</div>'
-        new_row += '<div class="form-group col-md-3">'
-        new_row += '<div class="col-sm-12">'
-        new_row += '<input class="form-control disabled" id="title" name="detail_image[]" placeholder="Image" value="" type="text">'
-        new_row += '</div>'
-        new_row += '</div>'
-        new_row += '<div class="form-group col-md-3">'
-        new_row += '<div class="col-sm-12">'
-        new_row += '<input class="form-control disabled" id="title" name="title" placeholder="Property Title" value="" type="text">'
-        new_row += '</div>'
-        new_row += '</div>'
-        new_row += '</div>'
+        new_row += '<div class="form-group col-md-3">';
+        new_row += '<div class="col-sm-12">';
+        new_row += '<input class="form-control disabled" id="title" name="detail_text[]" placeholder="Text" value="" type="text">';
+        new_row += '</div>';
+        new_row += '</div>';
+        new_row += '<div class="form-group col-md-3">';
+        new_row += '<div class="col-sm-12">';
+        new_row += '<input class="form-control disabled" id="title" name="detail_link[]" placeholder="Link (Optional)" value="" type="text">';
+        new_row += '</div>';
+        new_row += '</div>';
+        new_row += '<div class="form-group col-md-3">';
+        new_row += '<div class="col-sm-12">';
+        new_row += '<input class="form-control disabled" id="title" name="detail_image[]" placeholder="Image" value="" type="text">';
+        new_row += '</div>';
+        new_row += '</div>';
+        new_row += '<div class="form-group col-md-3">';
+        new_row += '<div class="col-sm-12">';
+        new_row += '<input class="form-control disabled" id="title" name="title" placeholder="Property Title" value="" type="text">';
+        new_row += '</div>';
+        new_row += '</div>';
+        new_row += '</div>';
         $(curr).parent().prev().after(new_row)
     }
 </script>

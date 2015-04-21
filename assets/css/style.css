@@ -1,0 +1,53 @@
+.dashboard_box {
+    background-color: #428BCA;
+    min-height: 150px;
+    border-radius: 10px;
+    color: #eee;
+}
+.dashboard_box:hover {
+    background-color: #eee;
+    color: #428BCA;
+}
+.dashboard_box h4{
+    padding-top: 30px;
+}
+.dashboard_box .property_count{
+    font-size: 60px;
+}
+.placeholders a:hover{
+    text-decoration: none !important;
+}
+
+.home-menu > ul > li.active >a{
+    color: #fff;
+    background-color: #428bca;
+}
+label{margin-top: 5px;}
+.input_label label{margin-top: 0px;}
+.form-group ul{list-style: none;}
+.input_listing li {
+    float: left;
+    width: 25%;
+    list-style: none;
+}
+.col-md-12 div.input_group {
+    width: 10%;
+    float: left;
+}
+.col-md-12 div.input_label {
+    width: 88%;
+    float: left;
+    line-height: 22px;
+}
+@media only screen and (max-width: 992px) {
+
+    .input_listing li{width: 33%;}
+}
+@media only screen and (max-width: 768px) {
+
+    .input_listing li{width: 50%;}
+}
+@media only screen and (max-width: 480px) {
+
+    .input_listing li{width: 100%;}
+}

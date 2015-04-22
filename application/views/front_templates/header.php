@@ -22,7 +22,7 @@
                 <div class="container">
                     <div class="header-inner">
                         <nav class="main">
-                            <div class="brand"> <a href="index-map.html"> <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="brand" /> </a> </div>
+                            <div class="brand"> <a href="<?php echo base_url();?>"> <img src="<?php echo base_url('assets/images/logo.png'); ?>" alt="brand" /> </a> </div>
                             <ul>
                                 <li> <a href="#" class="has-child">Home </a>
                                     <ul>

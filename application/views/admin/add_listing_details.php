@@ -48,7 +48,7 @@ $this->load->view('templates/leftpanel.php');
                                 </div>
                                 <div class="form-group col-md-3">
                                     <div class="col-sm-12">
-                                        <input class="form-control disabled" id="title" name="title" placeholder="Property Title" value="" type="text">
+                                        <!--<input class="btn btn-danger pull-right" onclick="delete_row(this)" type="button" value="Remove">-->
                                     </div>
                                 </div>
                             </div>
@@ -114,10 +114,14 @@ $this->load->view('templates/leftpanel.php');
         new_row += '</div>';
         new_row += '<div class="form-group col-md-3">';
         new_row += '<div class="col-sm-12">';
-        new_row += '<input class="form-control disabled" id="title" name="title" placeholder="Property Title" value="" type="text">';
+        new_row += '<input class="btn btn-danger pull-right" onclick="delete_row(this)" type="button" value="Remove">';
         new_row += '</div>';
         new_row += '</div>';
         new_row += '</div>';
-        $(curr).parent().prev().after(new_row)
+        $(curr).parent().prev().after(new_row);
+    }
+    
+    function delete_row(curr){
+        $(curr).parents(".row").remove();
     }
 </script>

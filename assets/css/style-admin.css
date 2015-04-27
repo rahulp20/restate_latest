@@ -11,3 +11,9 @@
   border-radius: 3px !important;
   box-shadow: none !important;
   padding: 6px 12px !important;}
+tr.table-head th {
+  background: #428bca;
+  color: #fff;
+  border-left: 2px solid;
+}
+.btn-danger{background-color: #428bca!important; color:#fff; border:none!important; }

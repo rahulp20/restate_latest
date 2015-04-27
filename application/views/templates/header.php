@@ -6,6 +6,7 @@
 
         <meta name="description" content="">
         <meta name="author" content="">
+        <link href="<?php echo base_url('assets/css/style-admin.css') ?>" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/dashboard.css'); ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/jquery.dataTables.css'); ?>" rel="stylesheet">

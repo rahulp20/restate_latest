@@ -1,3 +1,5 @@
+<?php // echo "<pre>";print_R($featured_data);exit;        ?>
+
 <div class="page-content">
     <div class="search collapse in" id="search-collapse">
         <div class="container">
@@ -88,335 +90,40 @@
 
     <div class="map-wrapper grid"> <img src="<?php echo base_url('assets/images/map.jpg') ?>" alt="" /> </div>
     <!--end .map-wrapper-->
+
     <div class="middle-container">
         <div class="item-slider">
 
             <ul id="owl-demo" class="owl-carousel">
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
+                <?php
+                //cho "<pre>";print_r($featured_data);
+                foreach ($featured_data as $featured_item) {
+                    ?>
+                    <li class="div-item"><a href="#">
+                            <div class="inner">
+                                <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
+                                <div class="item-content">
+                                    <header class="">
+                                        <h2><?php echo $featured_item->title; ?></h2>
+                                        <h3><?php echo $featured_item->property_type; ?> </h3>
+                                    </header>
+                                    <footer>
+                                        <dl>
+                                            <dt>Bathrooms </dt>
+                                            <dd><?php echo $featured_item->bathroom; ?> </dd>
+                                            <dt>Bedrooms </dt>
+                                            <dd><?php echo $featured_item->bedroom; ?> </dd>
+                                            <dt>Area </dt>
+                                            <dd><?php echo $featured_item->area; ?>m<sup>2 </sup></dd>
+                                            <dt>Garages </dt>
+                                            <dd><?php echo $featured_item->garages; ?> </dd>
+                                        </dl>
+                                    </footer>
+                                </div>
                             </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-                <li class="div-item"><a href="#">
-                        <div class="inner">
-                            <div class="image"> <img src="<?php echo base_url('assets/images/8.jpg') ?>" alt="" /> </div>
-                            <div class="item-content">
-                                <header class="">
-                                    <h2>942 Hillview Drive </h2>
-                                    <h3>Plymouth </h3>
-                                </header>
-                                <footer>
-                                    <dl>
-                                        <dt>Bathrooms </dt>
-                                        <dd>1 </dd>
-                                        <dt>Bedrooms </dt>
-                                        <dd>2 </dd>
-                                        <dt>Area </dt>
-                                        <dd>165m <sup>2 </sup></dd>
-                                        <dt>Garages </dt>
-                                        <dd>1 </dd>
-                                    </dl>
-                                </footer>
-                            </div>
-                        </div>
-                    </a></li>
-
-
-
+                        </a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>

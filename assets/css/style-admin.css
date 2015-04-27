@@ -1,4 +1,5 @@
-#listing_table input[type="text"]{  display: inline-block !important;
+#listing_table input.text_filter{ 
+  display: inline-block !important;
   width: 100% !important;
   height: 34px !important;
   margin-bottom: 9px !important;

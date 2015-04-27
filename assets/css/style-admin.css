@@ -17,3 +17,4 @@ tr.table-head th {
   border-left: 2px solid;
 }
 .btn-danger{background-color: #428bca!important; color:#fff; border:none!important; }
+#listing_table td{font-size: 14px;}

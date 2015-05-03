@@ -1,10 +1,11 @@
 <?php // echo "<pre>";print_R($featured_data);exit;        ?>
  <style type="text/css">
   html { height: 100% }
-  body { height: 355px; width:100%;  margin: 0; padding: 0 }
+  body { height: 455px; width:100%;  margin: 0; padding: 0 }
   #map_canvas { height: 100% }
 </style>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false
+&libraries=places"></script>
 <script type="text/javascript">
 
 var locations = [
@@ -14,6 +15,8 @@ var locations = [
   ['loan 4', 52.517683, 13.394393, 'address 4'],
   ['loan 5', 52.517688, 13.394395, 'address 5']
   ];
+  
+  var mapStyles = [{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]}];
 
   function initialize() {
 
@@ -25,7 +28,16 @@ var locations = [
     };
     var map = new google.maps.Map(document.getElementById("default"),
         myOptions);
-
+        map.setOptions({
+            zoom: 12,
+          //  center: mapCenter,
+            disableDefaultUI: false,
+            styles: mapStyles,
+            panControl: true,
+            zoomControl: true,
+            draggable: true,
+            flat:true
+        });
     setMarkers(map,locations)
 
   }
@@ -47,7 +59,7 @@ for (i = 0; i < locations.length; i++)
  latlngset = new google.maps.LatLng(lat, long);
 
   var marker = new google.maps.Marker({  
-          map: map, title: loan , position: latlngset  
+          map: map, title: loan , position: latlngset,icon: 'assets/images/marker.png'  
         });
         map.setCenter(marker.getPosition())
 
@@ -55,7 +67,7 @@ for (i = 0; i < locations.length; i++)
         var content = "Loan Number: " + loan +  '</h3>' + "Address: " + add     
 
   var infowindow = new google.maps.InfoWindow()
-
+ 
 google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
         return function() {
            infowindow.setContent(content);
@@ -65,6 +77,7 @@ google.maps.event.addListener(marker,'click', (function(marker,content,infowindo
 
   }
   }
+ 
 
 
 
@@ -157,7 +170,7 @@ google.maps.event.addListener(marker,'click', (function(marker,content,infowindo
     </div>
     <!--end .search-->
 
-   <div class="map-wrapper grid" id="default" style="width:100%; height:355px"></div>
+   <div class="map-wrapper grid" id="default" style="width:100%; height:455px"></div>
     <!--end .map-wrapper-->
 
     <div class="middle-container">

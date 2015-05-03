@@ -1,5 +1,74 @@
 <?php // echo "<pre>";print_R($featured_data);exit;        ?>
+ <style type="text/css">
+  html { height: 100% }
+  body { height: 355px; width:100%;  margin: 0; padding: 0 }
+  #map_canvas { height: 100% }
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script type="text/javascript">
 
+var locations = [
+  ['loan 1', 52.511467, 13.447179, 'address 1'],
+  ['loan 2', 52.549061, 13.422975, 'address 2'],
+  ['loan 3', 52.497622, 13.396110, 'address 3'],
+  ['loan 4', 52.517683, 13.394393, 'address 4'],
+  ['loan 5', 52.517688, 13.394395, 'address 5']
+  ];
+
+  function initialize() {
+
+    var myOptions = {
+      center: new google.maps.LatLng(33.890542, 151.274856),
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+
+    };
+    var map = new google.maps.Map(document.getElementById("default"),
+        myOptions);
+
+    setMarkers(map,locations)
+
+  }
+
+
+
+  function setMarkers(map,locations){
+
+      var marker, i
+
+for (i = 0; i < locations.length; i++)
+ {  
+
+ var loan = locations[i][0]
+ var lat = locations[i][1]
+ var long = locations[i][2]
+ var add =  locations[i][3]
+
+ latlngset = new google.maps.LatLng(lat, long);
+
+  var marker = new google.maps.Marker({  
+          map: map, title: loan , position: latlngset  
+        });
+        map.setCenter(marker.getPosition())
+
+
+        var content = "Loan Number: " + loan +  '</h3>' + "Address: " + add     
+
+  var infowindow = new google.maps.InfoWindow()
+
+google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        return function() {
+           infowindow.setContent(content);
+           infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow)); 
+
+  }
+  }
+
+
+
+  </script>
 <div class="page-content">
     <div class="search collapse in" id="search-collapse">
         <div class="container">
@@ -88,7 +157,7 @@
     </div>
     <!--end .search-->
 
-    <div class="map-wrapper grid"> <img src="<?php echo base_url('assets/images/map.jpg') ?>" alt="" /> </div>
+   <div class="map-wrapper grid" id="default" style="width:100%; height:355px"></div>
     <!--end .map-wrapper-->
 
     <div class="middle-container">

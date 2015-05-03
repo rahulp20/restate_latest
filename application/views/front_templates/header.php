@@ -14,9 +14,10 @@
         <link rel="stylesheet" href="<?php echo base_url('assets/css/style-front.css') ?>" type="text/css" />
         <link rel="stylesheet" href="<?php echo base_url('assets/css/fancybox.css') ?>" type="text/css" />
         <script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.1.0.min.js') ?>"></script>
+       
     </head>
 
-    <body id="page-top" class="has-map">
+    <body id="page-top" class="has-map" onload="initialize()">
         <div id="page-wrapper">
             <header class="animate" id="header">
                 <div class="container">

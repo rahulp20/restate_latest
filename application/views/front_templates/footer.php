@@ -13,6 +13,8 @@
 <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-select.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.nouislider.all.min.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/wow.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/fileinput.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/neon-custom_ad.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/fancybox.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/functions.js') ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/js/custom.js') ?>"></script>

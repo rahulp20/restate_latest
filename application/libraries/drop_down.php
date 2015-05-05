@@ -176,7 +176,7 @@ class Drop_Down {
         $result = $this->ci->db->get();
 
         $results = $result->result();
-        $select = "<select class='form-control disabled' name='$select_bar_name' >";
+        $select = "<select class='form-control disabled' name='$select_bar_name' id='drop_$select_bar_name' >";
 
         $select .="<option value=''>Select </option>";
         foreach ($results as $result) {

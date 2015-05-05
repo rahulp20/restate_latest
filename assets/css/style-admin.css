@@ -1,20 +1,50 @@
 #listing_table input.text_filter{ 
-  display: inline-block !important;
-  width: 100% !important;
-  height: 34px !important;
-  margin-bottom: 9px !important;
-  border: 1px solid #ebebeb !important;
-  font-size: 1.3rem !important;
-  line-height: normal !important;
-  color: #555 !important;
-  background-color: #fff !important;
-  border-radius: 3px !important;
-  box-shadow: none !important;
-  padding: 6px 12px !important;}
+    display: inline-block !important;
+    width: 100% !important;
+    height: 34px !important;
+    margin-bottom: 9px !important;
+    border: 1px solid #ebebeb !important;
+    font-size: 1.3rem !important;
+    line-height: normal !important;
+    color: #555 !important;
+    background-color: #fff !important;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+    padding: 6px 12px !important;}
 tr.table-head th {
-  background: #428bca;
-  color: #fff;
-  border-left: 2px solid;
+    background: #428bca;
+    color: #fff;
+    border-left: 2px solid;
 }
 .btn-danger{background-color: #428bca!important; color:#fff; border:none!important; }
 #listing_table td{font-size: 14px;}
+.fileinput{margin-bottom: 9px; display: inline-block;}
+.fileinput .btn {vertical-align: middle;}
+.fileinput-exists .fileinput-new, .fileinput-new .fileinput-exists {display: none;}
+.btn {display: inline-block;
+      margin-bottom: 0px;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      padding: 6px 12px;
+      font-size: 12px;
+      line-height: 1.42857;
+      border-radius: 3px;
+      -moz-user-select: none;
+}
+.btn-file > input {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0px;
+    opacity: 0;
+    transform: translate(-128px, -1px) scale(1);
+    width: 37%;
+    font-size: 23px;
+    direction: ltr;
+    cursor: pointer;
+}

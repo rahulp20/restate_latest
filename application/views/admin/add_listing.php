@@ -22,6 +22,8 @@ $this->load->view('templates/leftpanel.php');
                         Property Basic Information
                     </div>
                 </div>
+                <input type="hidden" name="latitude" id="latitude" />
+                <input type="hidden" name="longitude" id="longitude" />
                 <br>
                 <div class="row">
                     <div class="form-group col-md-6">
@@ -65,6 +67,16 @@ $this->load->view('templates/leftpanel.php');
                     <div class="col-md-6">
                         <div class="row">
                             <div class="form-group col-md-12 required">
+                                <label for="additional_address" class="col-sm-5 control-label ">Additional Address Info</label>
+                                <div class="col-sm-6"> 
+                                    <textarea style="resize: none;" name="additional_address" rows="6" class="form-control disabled"><?php echo (isset($listing_data->address) && !empty($listing_data->address)) ? $listing_data->address : ''; ?></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="form-group col-md-12 required">
                                 <label for="country" class="col-sm-5 control-label ">Country</label>
                                 <div class="col-sm-6" id="country"> 
                                     <?php
@@ -99,14 +111,18 @@ $this->load->view('templates/leftpanel.php');
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="form-group col-md-12 required">
-                                <label for="additional_address" class="col-sm-5 control-label ">Additional Address Info</label>
-                                <div class="col-sm-6"> 
-                                    <textarea style="resize: none;" name="additional_address" rows="7" class="form-control disabled"><?php echo (isset($listing_data->address) && !empty($listing_data->address)) ? $listing_data->address : ''; ?></textarea>
-                                </div>
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="latitude" class="col-sm-5 control-label">Latitude</label>
+                        <div class="col-sm-6">
+                            <input class="form-control disabled" id="latitude" name="latitude" placeholder="Latitude" value="<?php echo (isset($listing_data->latitude) && !empty($listing_data->latitude)) ? $listing_data->latitude : ''; ?>" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="longitude" class="col-sm-5 control-label">Longitude</label>
+                        <div class="col-sm-6">
+                            <input class="form-control disabled" id="longitude" name="longitude" placeholder="Longitude" value="<?php echo (isset($listing_data->longitude) && !empty($listing_data->longitude)) ? $listing_data->longitude : ''; ?>" type="text">
                         </div>
                     </div>
                 </div>
@@ -375,6 +391,14 @@ $this->load->view('templates/leftpanel.php');
                     required: true,
                     number: true
                 },
+                latitude: {
+                    required: true,
+                    number: true
+                },
+                longitude: {
+                    required: true,
+                    number: true
+                },
                 bedroom: {
                     required: true,
                     number: true
@@ -428,6 +452,12 @@ $this->load->view('templates/leftpanel.php');
                 },
                 garages: {
                     required: "Garages is required"
+                },
+                latitude: {
+                    required: "Latitude is required"
+                },
+                longitude: {
+                    required: "Longitude is required"
                 },
                 bedroom: {
                     required: "Bedroom is required"

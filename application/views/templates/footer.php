@@ -1,14 +1,17 @@
-<script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/jquery.dataTables.min.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/dataTables.tableTools.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/dataTables.responsive.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/jquery.dataTables.columnFilter.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/dataTables.tableTools.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/jquery.validate.js'); ?>"></script>
-<script src="<?php echo base_url('assets/js/bootstrap-switch.js') ?>"></script>
-<script src = "<?php echo base_url('assets/js/common.js'); ?>" ></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.dataTables.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/dataTables.tableTools.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/dataTables.responsive.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.dataTables.columnFilter.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/dataTables.tableTools.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.validate.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/fileinput.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap-switch.js') ?>"></script>
+<script type="text/javascript" src = "<?php echo base_url('assets/js/common.js'); ?>" ></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        $(".fileinput").fileinput();
+
         setTimeout(function() {
             $('.alert').hide()
         }, 10000);

@@ -22,4 +22,12 @@ class Admin_model extends CI_Model {
         }
     }
 
+    function delete_section($id) {
+        if ($this->db->delete('property_sections', array('id' => $id))) {
+            return true;
+        } else {
+            return FALSE;
+        }
+    }
+
 }

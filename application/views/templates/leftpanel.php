@@ -41,7 +41,6 @@
                 <li id="listing_details" class="home-menu"><a href="#">Listing Details</a>
                     <ul class="listing_details nav" style="display: none">
                         <li class="add_listing_details"><a href="<?php echo base_url('admin/add_property_details'); ?>">Add Listing Details</a></li>
-                        <li class="featured_listing"><a href="<?php echo base_url('admin/featured_listing'); ?>">Featured Listing</a></li>
                     </ul>
                 </li>
             </ul>
